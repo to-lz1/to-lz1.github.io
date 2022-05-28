@@ -1,1 +1,0 @@
-(function(){"use strict";const s=self;let t,a=25;function i(){t=setInterval(()=>s.postMessage("tick"),a)}s.addEventListener("message",e=>{e.data.interval?(a=e.data.interval,console.log(`set interval. interval: ${a}ms`),t&&(clearInterval(t),i())):e.data==="start"?i():e.data==="stop"&&(clearInterval(t),t=void 0)})})();
